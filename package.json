@@ -1,0 +1,163 @@
+{
+  "name": "html-bundler-webpack-plugin",
+  "version": "3.4.12",
+  "description": "HTML bundler plugin for webpack handles a template as an entry point, extracts CSS and JS from their sources referenced in HTML, supports template engines like Eta, EJS, Handlebars, Nunjucks.",
+  "keywords": [
+    "html",
+    "webpack",
+    "plugin",
+    "loader",
+    "bundler",
+    "entrypoint",
+    "template",
+    "ejs",
+    "handlebars",
+    "nunjucks",
+    "eta",
+    "hbs",
+    "twig",
+    "twigjs",
+    "integrity",
+    "style",
+    "javascript",
+    "css",
+    "scss",
+    "js"
+  ],
+  "license": "ISC",
+  "author": "webdiscus (https://github.com/webdiscus)",
+  "maintainers": [
+    "webdiscus (https://github.com/webdiscus)"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://patreon.com/biodiscus"
+  },
+  "homepage": "https://github.com/webdiscus/html-bundler-webpack-plugin",
+  "bugs": {
+    "url": "https://github.com/webdiscus/html-bundler-webpack-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdiscus/html-bundler-webpack-plugin.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "security": "npm audit --production",
+    "test": "jest --detectOpenHandles --config ./test/jest.config.js",
+    "test:coverage": "jest --detectOpenHandles --collectCoverage --config ./test/jest.config.js",
+    "test:index": "jest --detectOpenHandles --config ./test/jest.config.js --runTestsByPath ./test/index.test.js",
+    "test:issue": "jest --detectOpenHandles --config ./test/jest.config.js --runTestsByPath ./test/issue.test.js",
+    "test:unit": "jest --detectOpenHandles --collectCoverage --config ./test/jest.config.js --runTestsByPath ./test/unit.test.js",
+    "test:unitQueryParser": "jest --detectOpenHandles --collectCoverage --config ./test/jest.config.js --runTestsByPath ./test/unit.queryParser.test.js",
+    "test:verbose": "jest --detectOpenHandles --config ./test/jest.config.js --runTestsByPath ./test/verbose.test.js",
+    "test:verbose-update": "jest --detectOpenHandles --updateSnapshot --config ./test/jest.config.js --runTestsByPath ./test/verbose.test.js",
+    "publish:public": "npm publish --access public",
+    "publish:beta": "npm publish --tag beta"
+  },
+  "main": "src/index.js",
+  "types": "types.d.ts",
+  "files": [
+    "src",
+    "plugins",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "types.d.ts"
+  ],
+  "exports": {
+    ".": "./src/index.js",
+    "./plugins": "./plugins/index.js",
+    "./plugins/favicons-bundler-plugin": {
+      "types": "./plugins/favicons-bundler-plugin/index.d.ts",
+      "require": "./plugins/favicons-bundler-plugin/index.js",
+      "import": "./plugins/favicons-bundler-plugin/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=14.21.0"
+  },
+  "peerDependencies": {
+    "ejs": ">=3.1.9",
+    "favicons": ">=7.1.4",
+    "handlebars": ">=4.7.7",
+    "liquidjs": ">=10.7.0",
+    "mustache": ">=4.2.0",
+    "nunjucks": ">=3.2.3",
+    "twig": ">=1.17.1",
+    "webpack": ">=5.32.0"
+  },
+  "peerDependenciesMeta": {
+    "favicons": {
+      "optional": true
+    },
+    "ejs": {
+      "optional": true
+    },
+    "handlebars": {
+      "optional": true
+    },
+    "liquidjs": {
+      "optional": true
+    },
+    "mustache": {
+      "optional": true
+    },
+    "nunjucks": {
+      "optional": true
+    },
+    "twig": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "ansis": "2.0.1",
+    "enhanced-resolve": ">=5.7.0",
+    "eta": "^3.1.1",
+    "html-minifier-terser": "^7.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.2",
+    "@test/html-bundler-webpack-plugin": "file:./",
+    "@test-fixtures/js": "0.0.2",
+    "@test-fixtures/dius": "file:./test/fixtures/node_modules/dius/",
+    "@test-fixtures/lorem": "file:./test/fixtures/node_modules/lorem/",
+    "@test-fixtures/scss": "0.0.7",
+    "@test/import-css": "file:./test/fixtures/node_modules/import-css/",
+    "@types/jest": "^29.5.11",
+    "copy-webpack-plugin": "9.1.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "ejs": "^3.1.9",
+    "favicons": "7.1.4",
+    "handlebars": "^4.7.8",
+    "handlebars-layouts": "^3.1.4",
+    "jest": "^29.7.0",
+    "liquidjs": "^10.10.0",
+    "mustache": "^4.2.0",
+    "nunjucks": "^3.2.4",
+    "prettier": "^3.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "responsive-loader": "^3.1.2",
+    "rtlcss": "^4.1.1",
+    "sass": "1.67.0",
+    "sass-loader": "13.3.3",
+    "sharp": "^0.32.6",
+    "ts-loader": "9.5.1",
+    "typescript": "5.3.3",
+    "twig": "^1.17.1",
+    "vue": "3.3.13",
+    "vue-loader": "^17.4.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
